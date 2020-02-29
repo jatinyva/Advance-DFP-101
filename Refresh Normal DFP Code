@@ -1,0 +1,92 @@
+// Refresh DFP ADS 
+
+//  Main Script you need 
+
+setInterval(function () {
+    console.log("Jatin");
+    googletag.pubads().refresh([slot1]);
+}, 30000);
+
+
+// Normal DFP Head code 
+
+<script async src="https://securepubads.g.doubleclick.net/tag/js/gpt.js"></script>
+    <script>
+        window.googletag = window.googletag || {cmd: []};
+  googletag.cmd.push(function() {
+        googletag.defineSlot('/21855545885/Adranium_KeyValue', [300, 250], 'div-gpt-ad-1582527973515-0').addService(googletag.pubads());
+ googletag.pubads().enableSingleRequest();
+ googletag.enableServices();
+});
+</script>
+
+// Let's Modify it 
+
+// 01 - Declare a variable 
+
+<script async src="https://securepubads.g.doubleclick.net/tag/js/gpt.js"></script>
+<script>
+    window.googletag = window.googletag || {cmd: []};
+{/* like this you can name it anything */}
+   var slot1;
+
+  googletag.cmd.push(function() {
+        googletag.defineSlot('/21855545885/Adranium_KeyValue', [300, 250], 'div-gpt-ad-1582527973515-0').addService(googletag.pubads());
+googletag.pubads().enableSingleRequest();
+googletag.enableServices();
+});
+</script>
+
+
+// 02 - Assign the Variable  
+
+<script async src="https://securepubads.g.doubleclick.net/tag/js/gpt.js"></script>
+<script>
+    window.googletag = window.googletag || {cmd: []};
+    var slot1;
+  googletag.cmd.push(function() {
+
+// Here assign it to defineSlot
+
+ slot1 = googletag.defineSlot('/21855545885/Adranium_KeyValue', [300, 250], 'div-gpt-ad-1582527973515-0').addService(googletag.pubads());
+googletag.pubads().enableSingleRequest();
+googletag.enableServices();
+});
+</script>
+
+// 03 - Last step  
+
+<script async src = "https://securepubads.g.doubleclick.net/tag/js/gpt.js" ></script >
+    <script>
+        window.googletag = window.googletag || {cmd: []};
+        var slot1;
+  googletag.cmd.push(function() {
+        slot1 = googletag.defineSlot('/21855545885/Adranium_KeyValue', [300, 250], 'div-gpt-ad-1582527973515-0').addService(googletag.pubads());
+googletag.pubads().enableSingleRequest();
+googletag.enableServices();
+//   PASTE THAT CODE HERE
+setInterval(function () {
+        console.log("Jatin");
+    googletag.pubads().refresh([slot1]);
+}, 30000);
+});
+</script>
+
+// use 30000); to adjust the refresh timing 30000 means 30 sec
+
+//  Final code 
+
+<script async src="https://securepubads.g.doubleclick.net/tag/js/gpt.js" ></script >
+<script>
+    window.googletag = window.googletag || {cmd: []};
+    var slot1;
+  googletag.cmd.push(function() {
+        slot1 = googletag.defineSlot('/21855545885/Adranium_KeyValue', [300, 250], 'div-gpt-ad-1582527973515-0').addService(googletag.pubads());
+googletag.pubads().enableSingleRequest();
+googletag.enableServices();
+setInterval(function () {
+        console.log("Jatin");
+googletag.pubads().refresh([slot1]);
+}, 30000);
+});
+</script>
