@@ -1,0 +1,26 @@
+<script async src="https://securepubads.g.doubleclick.net/tag/js/gpt.js"></script>
+<script>
+  window.googletag = window.googletag || {cmd: []};
+  
+  var slot1;
+  googletag.cmd.push(function() {
+
+      var mappingCommon_AD_Unit = googletag.sizeMapping().
+ addSize([992, 0], [[728, 90]]). //desktop
+
+ addSize([768, 0], [[300, 250]]). //tablet
+
+ addSize([380, 0], [[320, 50],[300, 250]]). //mobile
+
+ addSize([0, 0], [[320, 50], [1, 1]]). //other
+
+ build();
+
+    slot1 = googletag.defineSlot('/21855545885/Common_AD_Unit', [300, 250], 'div-gpt-ad-1582635976679-0').defineSizeMapping(mappingCommon_AD_Unit) .addService(googletag.pubads());
+    googletag.pubads().enableSingleRequest();
+    googletag.enableServices();
+    setInterval(function(){
+        console.log("Jatin")
+        googletag.pubads().refresh([slot1]);}, 10000);
+  });
+</script>
