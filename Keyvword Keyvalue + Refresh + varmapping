@@ -1,0 +1,52 @@
+<script async src="https://securepubads.g.doubleclick.net/tag/js/gpt.js"></script>
+<script>
+    function getMeta(metaName) {
+    const metas = document.getElementsByTagName('meta');
+    for (let i = 0; i < metas.length; i++) {
+        if (metas[i].getAttribute('name') === metaName) {
+            return metas[i].getAttribute('content');
+}
+}
+return '';
+}
+var Key_word = getMeta('description');
+var mission = Key_word.match(/DoubleClick over/gi);
+var slot2;
+  (function () {
+
+  var setTargeting = function () {
+
+    var mappingAdranium_keyvalue = googletag.sizeMapping().
+addSize([992, 0], [[728, 90]]). //desktop
+
+addSize([768, 0], [[300, 250]]). //tablet
+
+addSize([380, 0], [[320, 50],[300, 250]]). //mobile
+
+addSize([0, 0], [[320, 50], [1, 1]]). //other
+
+build();
+  slot2 = googletag.defineSlot('/21855545885/Adranium_KeyValue', [300, 250], 'div-gpt-ad-1582527973515-0').defineSizeMapping(mappingAdranium_keyvalue).addService(googletag.pubads());
+googletag.pubads().enableSingleRequest();
+googletag.pubads().collapseEmptyDivs();
+googletag.enableServices();
+setInterval(function(){
+        console.log("Jatin2")
+        googletag.pubads().refresh([slot2]);}, 10000);
+
+window.googletag.pubads().setTargeting('key_word', mission.toString()  );
+ 
+};
+  window.googletag = window.googletag || {};
+  window.googletag.cmd = window.googletag.cmd || [];
+  if (window.googletag.cmd.unshift) {
+    window.googletag.cmd.unshift(setTargeting);
+  }
+  else {
+    window.googletag.cmd.push(setTargeting);
+  }
+})();
+
+console.log(mission.toString());
+
+</script>
