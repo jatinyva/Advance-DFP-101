@@ -1,0 +1,112 @@
+  // Responsive or Varmapping DFP ADS 
+
+// Main script you need to add
+
+var mappingCommon_AD_Unit = googletag.sizeMapping().
+    addSize([992, 0], [[728, 90]]). //desktop
+
+    addSize([768, 0], [[300, 250]]). //tablet
+
+    addSize([380, 0], [[320, 50], [300, 250]]). //mobile
+
+    addSize([0, 0], [[320, 50], [1, 1]]). //other
+
+    build();
+
+
+// Normal DFP Head code 
+
+<script async src="https://securepubads.g.doubleclick.net/tag/js/gpt.js"></script>
+    <script>
+        window.googletag = window.googletag || {cmd: []};
+  googletag.cmd.push(function() {
+        googletag.defineSlot('/21855545885/Adranium_KeyValue', [300, 250], 'div-gpt-ad-1582527973515-0').addService(googletag.pubads());
+ googletag.pubads().enableSingleRequest();
+ googletag.enableServices();
+});
+</script>
+
+// Let's Modify it 
+
+
+// 01 - Add main script code into the function
+
+<script async src="https://securepubads.g.doubleclick.net/tag/js/gpt.js"></script>
+<script>
+    window.googletag = window.googletag || {cmd: []};
+  googletag.cmd.push(function() {
+//  Paste here 
+
+// Change var mappingCommon_Ad_Unit to anything 
+
+var mappingCommon_AD_Unit = googletag.sizeMapping().
+    addSize([992, 0], [[728, 90]]). //desktop
+
+    addSize([768, 0], [[300, 250]]). //tablet
+
+    addSize([380, 0], [[320, 50], [300, 250]]). //mobile
+
+    addSize([0, 0], [[320, 50], [1, 1]]). //other
+
+    build();
+    
+        googletag.defineSlot('/21855545885/Adranium_KeyValue', [300, 250], 'div-gpt-ad-1582527973515-0').addService(googletag.pubads());
+googletag.pubads().enableSingleRequest();
+googletag.enableServices();
+});
+</script>
+
+// 02 - Assign the size mapping to the code 
+
+<script async src="https://securepubads.g.doubleclick.net/tag/js/gpt.js"></script>
+<script>
+    window.googletag = window.googletag || {cmd: []};
+  googletag.cmd.push(function() {
+var mappingCommon_AD_Unit = googletag.sizeMapping().
+    addSize([992, 0], [[728, 90]]). //desktop
+
+    addSize([768, 0], [[300, 250]]). //tablet
+
+    addSize([380, 0], [[320, 50], [300, 250]]). //mobile
+
+    addSize([0, 0], [[320, 50], [1, 1]]). //other
+
+    build();
+googletag.defineSlot('/21855545885/Adranium_KeyValue', [300, 250], 'div-gpt-ad-1582527973515-0')
+
+// before .addService paste your code
+.defineSizeMapping(mappingCommon_AD_Unit).addService(googletag.pubads());
+googletag.pubads().enableSingleRequest();
+googletag.enableServices();
+});
+</script>
+
+// ADJUST THE SIZE ON THE PLATFORMS
+
+    addSize([992, 0  DO NOT CHANGE IT], [[728, 90] [add any new size here]]). //desktop
+
+    addSize([768, 0], [[300, 250]]). //tablet
+
+    addSize([380, 0], [[320, 50], [300, 250]]). //mobile
+
+    addSize([0, 0], [[320, 50], [1, 1]]). //other
+
+    build();
+
+//  Final Code 
+
+<script async src="https://securepubads.g.doubleclick.net/tag/js/gpt.js"></script>
+    <script>
+        window.googletag = window.googletag || {cmd: []};
+        googletag.cmd.push(function() {
+        var mappingCommon_AD_Unit = googletag.sizeMapping().
+            addSize([992, 0], [[728, 90]]). //desktop
+            addSize([768, 0], [[300, 250]]). //tablet
+            addSize([380, 0], [[320, 50], [300, 250]]). //mobile
+            addSize([0, 0], [[320, 50], [1, 1]]). //other
+            build();
+        googletag.defineSlot('/21855545885/Adranium_KeyValue', [300, 250], 'div-gpt-ad-1582527973515-0').defineSizeMapping(mappingCommon_AD_Unit).addService(googletag.pubads());
+        googletag.pubads().enableSingleRequest();
+        googletag.enableServices();
+        });
+</script>
