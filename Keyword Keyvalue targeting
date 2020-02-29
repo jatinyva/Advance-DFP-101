@@ -1,0 +1,108 @@
+
+// Keyword Targeting in DFP 
+
+// Below code will extract the meta description of the URL and try to find the trageting keyword "Key_word.match(/Keyword you want to target/gi)"
+
+function getMeta(metaName) {
+    const metas = document.getElementsByTagName('meta');
+    for (let i = 0; i < metas.length; i++) {
+        if (metas[i].getAttribute('name') === metaName) {
+            return metas[i].getAttribute('content');
+        }
+    }
+    return '';
+}
+var Key_word = getMeta('description');
+var mission = Key_word.match(/DoubleClick over/gi)
+
+// Key_word.match(/Keyword you want to target/gi) is the variable you need to pass in the settargeting code
+
+// Normal DFP Head code 
+
+<script async src="https://securepubads.g.doubleclick.net/tag/js/gpt.js"></script>
+    <script>
+        window.googletag = window.googletag || {cmd: []};
+  googletag.cmd.push(function() {
+        googletag.defineSlot('/21855545885/Adranium_KeyValue', [300, 250], 'div-gpt-ad-1582527973515-0').addService(googletag.pubads());
+ googletag.pubads().enableSingleRequest();
+ googletag.enableServices();
+});
+</script>
+
+//  Modify this code for the targeting 
+
+//  01 - Split the first line and add our "Main URL Spliter Code"
+
+<script async src="https://securepubads.g.doubleclick.net/tag/js/gpt.js"></script>
+
+<script>
+    {/* here */}
+    function getMeta(metaName) {
+    const metas = document.getElementsByTagName('meta');
+    for (let i = 0; i < metas.length; i++) {
+        if (metas[i].getAttribute('name') === metaName) {
+            return metas[i].getAttribute('content');
+}
+}
+return '';
+}
+var Key_word = getMeta('description');
+var mission = Key_word.match(/DoubleClick over/gi)
+ 
+(function () {
+  var setTargeting = function () {
+    //   02 - Add define slot line here 
+    googletag.defineSlot('/21855545885/Adranium_KeyValue', [300, 250], 'div-gpt-ad-1582527973515-0').addService(googletag.pubads());
+    googletag.pubads().enableSingleRequest();
+    googletag.pubads().collapseEmptyDivs();
+    googletag.enableServices();
+
+    // Add this line of code for with the variable 
+  window.googletag.pubads().setTargeting('key_word', mission.toString()  );
+};
+  window.googletag = window.googletag || {};
+    window.googletag.cmd = window.googletag.cmd || [];
+  if (window.googletag.cmd.unshift) {
+        window.googletag.cmd.unshift(setTargeting);
+  }
+  else {
+        window.googletag.cmd.push(setTargeting);
+  }
+})();
+</script>
+
+//  Final CODE IN ONE PIECE 
+
+<script async src="https://securepubads.g.doubleclick.net/tag/js/gpt.js"></script>
+
+<script>
+    function getMeta(metaName) {
+    const metas = document.getElementsByTagName('meta');
+    for (let i = 0; i < metas.length; i++) {
+        if (metas[i].getAttribute('name') === metaName) {
+            return metas[i].getAttribute('content');
+}
+}
+return '';
+}
+var Key_word = getMeta('description');
+var mission = Key_word.match(/DoubleClick over/gi)
+
+(function () {
+  var setTargeting = function () {
+        googletag.defineSlot('/21855545885/Adranium_KeyValue', [300, 250], 'div-gpt-ad-1582527973515-0').addService(googletag.pubads());
+    googletag.pubads().enableSingleRequest();
+    googletag.pubads().collapseEmptyDivs();
+    googletag.enableServices();
+  window.googletag.pubads().setTargeting('key_word', mission.toString()  );
+};
+  window.googletag = window.googletag || {};
+      window.googletag.cmd = window.googletag.cmd || [];
+  if (window.googletag.cmd.unshift) {
+        window.googletag.cmd.unshift(setTargeting);
+}
+  else {
+        window.googletag.cmd.push(setTargeting);
+}
+})();
+</script>
