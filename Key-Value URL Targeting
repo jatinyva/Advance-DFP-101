@@ -1,0 +1,77 @@
+// Key-Value URL Targeting
+
+// Main script required is a JS that can the split the URL from its root because Google Ad Manager has a limit of 135 char
+
+var browser_url = window.location.href; var res = browser_url.split("/"); lastElement = window.location.href.split('/'); custom_url = lastElement[lastElement.length - 2];
+
+// custom_url is the variable you need to pass in the settargeting code 
+
+// Normal DFP Head code 
+
+<script async src="https://securepubads.g.doubleclick.net/tag/js/gpt.js"></script>
+    <script>
+        window.googletag = window.googletag || {cmd: []};
+  googletag.cmd.push(function() {
+        googletag.defineSlot('/21855545885/Adranium_KeyValue', [300, 250], 'div-gpt-ad-1582527973515-0').addService(googletag.pubads());
+ googletag.pubads().enableSingleRequest();
+ googletag.enableServices();
+});
+</script>
+
+//  Modify this code for the targeting 
+
+//  01 - Split the first line and add our "Main URL Spliter Code"
+
+<script async src="https://securepubads.g.doubleclick.net/tag/js/gpt.js"></script>
+
+<script>
+    {/* here */}
+var browser_url = window.location.href; var res = browser_url.split("/");  lastElement = window.location.href.split('/'); custom_url = lastElement[lastElement.length-2];
+    
+(function () {
+  var setTargeting = function () {
+    //   02 - Add define slot line here 
+    googletag.defineSlot('/21855545885/Adranium_KeyValue', [300, 250], 'div-gpt-ad-1582527973515-0').addService(googletag.pubads());
+    googletag.pubads().enableSingleRequest();
+    googletag.pubads().collapseEmptyDivs();
+    googletag.enableServices();
+
+    // Add this line of code for with the variable 
+  window.googletag.pubads().setTargeting('urls_lists', custom_url  );
+};
+  window.googletag = window.googletag || {};
+    window.googletag.cmd = window.googletag.cmd || [];
+  if (window.googletag.cmd.unshift) {
+        window.googletag.cmd.unshift(setTargeting);
+  }
+  else {
+        window.googletag.cmd.push(setTargeting);
+  }
+})();
+</script>
+
+//  Final CODE IN ONE PIECE 
+
+<script async src="https://securepubads.g.doubleclick.net/tag/js/gpt.js"></script>
+<script>
+var browser_url = window.location.href; var res = browser_url.split("/");  lastElement = window.location.href.split('/'); custom_url = lastElement[lastElement.length-2]; 
+
+  (function () {
+  var setTargeting = function () {
+  googletag.defineSlot('/21855545885/Adranium_KeyValue', [300, 250], 'div-gpt-ad-1582527973515-0').addService(googletag.pubads());
+  googletag.pubads().enableSingleRequest();
+  googletag.pubads().collapseEmptyDivs();
+  googletag.enableServices();
+  window.googletag.pubads().setTargeting('urls_lists', custom_url  );
+  
+};
+  window.googletag = window.googletag || {};
+  window.googletag.cmd = window.googletag.cmd || [];
+  if (window.googletag.cmd.unshift) {
+    window.googletag.cmd.unshift(setTargeting);
+  }
+  else {
+    window.googletag.cmd.push(setTargeting);
+  }
+})();
+</script>
