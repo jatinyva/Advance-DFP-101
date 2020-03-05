@@ -1,0 +1,288 @@
+var script = document.createElement('script');
+var script2 = document.createElement('script');
+   script.src = 'https://www.cybermedianews.in/prebid.js';
+   script.type = 'text/javascript';
+   document.getElementsByTagName('head')[0].appendChild(script);
+   script2.src = 'https://securepubads.g.doubleclick.net/tag/js/gpt.js';
+   script2.type = 'text/javascript';
+   document.getElementsByTagName('head')[0].appendChild(script2);
+
+var desktopSizes = [
+    [728, 90],
+    [300, 250]
+];
+var tabletSizes = [
+    [728, 90],
+    [300, 250]
+];
+var phoneSizes = [
+    [300, 250]
+];
+var div_1_sizes = [
+    [300, 250]
+];
+var div_2_sizes = [
+    [300, 600]
+];
+
+var PREBID_TIMEOUT = 3000;
+
+var googletag = googletag || {};
+googletag.cmd = googletag.cmd || [];
+
+var pbjs = pbjs || {};
+pbjs.que = pbjs.que || [];
+
+var adUnits = [{
+    code: '/21902364955/CMHB_tutuapp.me',
+    mediaTypes: {
+        banner: {
+            sizes: div_1_sizes
+        }
+    },
+    bids: [{
+        bidder: 'adsolut',
+        params: {
+            host:'cpm.adsolut.in',
+            zoneId: 80562
+        }
+    }]
+},{
+    code: '/21902364955/CMHB_tutuapp.me/CMHB_tutuapp.me_ATF_300x250',
+    mediaTypes: {
+        banner: {
+            sizes: div_1_sizes
+        }
+    },
+    bids: [{
+        bidder: 'adsolut',
+        params: {
+            host:'cpm.adsolut.in',
+            zoneId: 80562
+        }
+    }]
+},{
+    code: '/21902364955/CMHB_tutuapp.me/CMHB_tutuapp.me_ATF2_300x250',
+    mediaTypes: {
+        banner: {
+            sizes: div_1_sizes
+        }
+    },
+    bids: [{
+        bidder: 'adsolut',
+        params: {
+            host:'cpm.adsolut.in',
+            zoneId: 80562
+        }
+    }]
+},{
+    code: '/21902364955/CMHB_tutuapp.me/CMHB_tutuapp.me_BTF_300x250',
+    mediaTypes: {
+        banner: {
+            sizes: div_1_sizes
+        }
+    },
+    bids: [{
+        bidder: 'adsolut',
+        params: {
+            host:'cpm.adsolut.in',
+            zoneId: 80562
+        }
+    }]
+},{
+    code: '/21902364955/CMHB_tutuapp.me/CMHB_tutuapp.me_Sidebar_300x600',
+    mediaTypes: {
+        banner: {
+            sizes: div_2_sizes
+        }
+    },
+    bids: [{
+        bidder: 'adsolut',
+        params: {
+            host:'cpm.adsolut.in',
+            zoneId: 80562
+        }
+    }]
+}];
+
+pbjs.que.push(function() {
+    pbjs.addAdUnits(adUnits);
+    pbjs.setConfig({ debug: true });
+    pbjs.setConfig({
+        sizeConfig: [{
+            'mediaQuery': '(min-width: 1025px)',
+            'sizesSupported': desktopSizes,
+            'labels': ['desktop']
+        }, {
+            'mediaQuery': '(min-width: 768px) and (max-width: 1024px)',
+            'sizesSupported': tabletSizes,
+            'labels': ['tablet']
+        }, {
+            'mediaQuery': '(min-width: 320px) and (max-width: 812px)',
+            'sizesSupported': phoneSizes,
+            'labels': ['phone']
+        }]
+    });
+});
+
+var slot1;
+
+googletag.cmd.push(function() {
+    var mapping = googletag.sizeMapping().
+
+addSize([992, 0], [[300, 250]]). //desktop
+
+addSize([768, 0], [[728, 90]]). //tablet
+
+addSize([320, 0], [[300, 250]]). //mobile
+
+addSize([0, 0], [[320, 250]]). //other
+
+build();
+
+slot1 = googletag.defineSlot('/21902364955/CMHB_tutuapp.me', [[300, 250]], 'div-gpt-ad-1582716038426-0').defineSizeMapping(mapping).addService(googletag.pubads());   
+googletag.pubads().enableSingleRequest();
+googletag.enableServices();  
+});
+var slot2;
+googletag.cmd.push(function() {
+    var mapping = googletag.sizeMapping().
+
+addSize([992, 0], [[300, 250]]). //desktop
+
+addSize([768, 0], [[728, 90]]). //tablet
+
+addSize([320, 0], [[300, 250]]). //mobile
+
+addSize([0, 0], [[320, 250]]). //other
+
+build(); 
+
+slot2 = googletag.defineSlot('/21902364955/CMHB_tutuapp.me/CMHB_tutuapp.me_ATF_300x250', [300, 250], 'div-gpt-ad-1582732794278-0').defineSizeMapping(mapping).addService(googletag.pubads());
+googletag.pubads().enableSingleRequest();
+googletag.enableServices(); 
+});
+
+
+var slot3;
+googletag.cmd.push(function() {
+    var mapping = googletag.sizeMapping().
+
+addSize([992, 0], [[300, 250]]). //desktop
+
+addSize([768, 0], [[728, 90]]). //tablet
+
+addSize([320, 0], [[300, 250]]). //mobile
+
+addSize([0, 0], [[320, 250]]). //other
+
+build(); 
+
+slot3 = googletag.defineSlot('/21902364955/CMHB_tutuapp.me/CMHB_tutuapp.me_ATF2_300x250', [300, 250], 'div-gpt-ad-1582732941769-0').defineSizeMapping(mapping).addService(googletag.pubads());
+googletag.pubads().enableSingleRequest();
+googletag.enableServices();
+});
+
+var slot4;
+    googletag.cmd.push(function() {
+        var mapping = googletag.sizeMapping().
+    
+    addSize([992, 0], [[300, 250]]). //desktop
+    
+    addSize([768, 0], [[728, 90]]). //tablet
+    
+    addSize([320, 0], [[300, 250]]). //mobile
+    
+    addSize([0, 0], [[320, 250]]). //other
+    
+    build(); 
+    
+    slot4 = googletag.defineSlot('/21902364955/CMHB_tutuapp.me/CMHB_tutuapp.me_BTF_300x250', [300, 250], 'div-gpt-ad-1582732968859-0').defineSizeMapping(mapping).addService(googletag.pubads());
+    googletag.pubads().enableSingleRequest();
+    googletag.enableServices();
+    });
+
+    var slot5;
+    googletag.cmd.push(function() {
+        var mapping = googletag.sizeMapping().
+    
+    addSize([992, 0], [[300, 600]]). //desktop
+    
+    addSize([768, 0], [[728, 90]]). //tablet
+    
+    addSize([320, 0], [[300, 600]]). //mobile
+    
+    addSize([0, 0], [[320, 250]]). //other
+    
+    build(); 
+    
+    slot5 =  googletag.defineSlot('/21902364955/CMHB_tutuapp.me/CMHB_tutuapp.me_Sidebar_300x600', [300, 600], 'div-gpt-ad-1582732998569-0').defineSizeMapping(mapping).addService(googletag.pubads());
+    googletag.pubads().enableSingleRequest();
+    googletag.enableServices();
+    });
+
+
+    function refreshBid() {
+        console.log("Cybermedia")
+        pbjs.que.push(function() {
+            pbjs.requestBids({
+                timeout: PREBID_TIMEOUT,
+                adUnitCodes: ['/21902364955/CMHB_tutuapp.me'],
+                bidsBackHandler: function() {
+                    pbjs.setTargetingForGPTAsync(['/21902364955/CMHB_tutuapp.me']);
+                    googletag.pubads().refresh([slot1]);
+                }
+            });
+        });
+        pbjs.que.push(function() {
+            pbjs.requestBids({
+                timeout: PREBID_TIMEOUT,
+                adUnitCodes: ['/21902364955/CMHB_tutuapp.me/CMHB_tutuapp.me_ATF_300x250'],
+                bidsBackHandler: function() {
+                    pbjs.setTargetingForGPTAsync(['/21902364955/CMHB_tutuapp.me/CMHB_tutuapp.me_ATF_300x250']);
+                    googletag.pubads().refresh([slot2]);
+                    
+                }
+            });
+        });
+            pbjs.que.push(function() {
+            pbjs.requestBids({
+                timeout: PREBID_TIMEOUT,
+                adUnitCodes: ['/21902364955/CMHB_tutuapp.me/CMHB_tutuapp.me_ATF2_300x250'],
+                bidsBackHandler: function() {
+                    pbjs.setTargetingForGPTAsync(['/21902364955/CMHB_tutuapp.me/CMHB_tutuapp.me_ATF2_300x250']);
+                    googletag.pubads().refresh([slot3]);
+                    
+                }
+            });
+        });
+            pbjs.que.push(function() {
+            pbjs.requestBids({
+                timeout: PREBID_TIMEOUT,
+                adUnitCodes: ['/21902364955/CMHB_tutuapp.me/CMHB_tutuapp.me_BTF_300x250'],
+                bidsBackHandler: function() {
+                    pbjs.setTargetingForGPTAsync(['/21902364955/CMHB_tutuapp.me/CMHB_tutuapp.me_BTF_300x250']);
+                    googletag.pubads().refresh([slot4]);
+                    
+                }
+            });
+        });
+            pbjs.que.push(function() {
+            pbjs.requestBids({
+                timeout: PREBID_TIMEOUT,
+                adUnitCodes: ['/21902364955/CMHB_tutuapp.me/CMHB_tutuapp.me_Sidebar_300x600'],
+                bidsBackHandler: function() {
+                    pbjs.setTargetingForGPTAsync(['/21902364955/CMHB_tutuapp.me/CMHB_tutuapp.me_Sidebar_300x600']);
+                    googletag.pubads().refresh([slot5]);
+                    
+                }
+            });
+        });
+          
+    } 
+            
+    window.onload = refreshBid();
+
+      window.setInterval(function(){
+        refreshBid()
+      }, 30000);  
