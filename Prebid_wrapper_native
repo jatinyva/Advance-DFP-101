@@ -1,0 +1,84 @@
+var script = document.createElement('script');
+var script1 = document.createElement('script');
+   script.src = '//acdn.adnxs.com/prebid/not-for-prod/1/prebid.js';
+   script.type = 'text/javascript';
+   document.getElementsByTagName('head')[0].appendChild(script);
+   script1.src = '//www.googletagservices.com/tag/js/gpt.js';
+   script1.type = 'text/javascript';
+   document.getElementsByTagName('head')[0].appendChild(script1);
+    var PREBID_TIMEOUT = 1000;
+    var FAILSAFE_TIMEOUT = 3000;
+    var adUnits = [{
+        code: '/21805061584/CM_OMH_Native',
+        div: 'div-gpt-ad-1583402119212-0',
+        size: [1, 1],
+        mediaTypes: {
+            native: {
+                image: {
+                    required: true,
+                    sizes: [150, 50]
+                },
+                title: {
+                    required: true,
+                    len: 80
+                },
+                sponsoredBy: {
+                    required: true
+                },
+                clickUrl: {
+                    required: true
+                },
+                privacyLink: {
+                    required: false
+                },
+                body: {
+                    required: true
+                },
+                icon: {
+                    required: true,
+                    sizes: [50, 50]
+                }
+            }
+        },
+        bids: [{
+            bidder: 'appnexus',
+            params: {
+                placementId: 13232354
+            }
+        }]
+    }];
+    // ======== DO NOT EDIT BELOW THIS LINE =========== //
+    var googletag = googletag || {};
+    googletag.cmd = googletag.cmd || [];
+    googletag.cmd.push(function() {
+        googletag.pubads().disableInitialLoad();
+    });
+    var pbjs = pbjs || {};
+    pbjs.que = pbjs.que || [];
+    pbjs.que.push(function() {
+        pbjs.addAdUnits(adUnits);
+        pbjs.requestBids({
+            bidsBackHandler: initAdserver,
+            timeout: PREBID_TIMEOUT
+        });
+    });
+
+    function initAdserver() {
+        if (pbjs.initAdserverSet) return;
+        pbjs.initAdserverSet = true;
+        googletag.cmd.push(function() {
+            pbjs.que.push(function() {
+                pbjs.setTargetingForGPTAsync();
+                googletag.pubads().refresh();
+            });
+        });
+    }
+    // in case PBJS doesn't load
+    setTimeout(function() {
+        initAdserver();
+    }, FAILSAFE_TIMEOUT);
+    googletag.cmd.push(function() {
+        googletag.defineSlot('/21805061584/CM_OMH_Native', [[1, 1], 'fluid'], 'div-gpt-ad-1583402119212-0').addService(googletag.pubads());
+        googletag.pubads().enableSingleRequest();
+        googletag.enableServices();
+    });
